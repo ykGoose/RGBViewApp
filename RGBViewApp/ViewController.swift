@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     // MARK: - PublicMethod
     func movingSlider(sliderColor: UISlider, colorLaber: UILabel) {
-        let movingResult = CGFloat(round(sliderColor.value * 100) / 100)
+        let movingResult = CGFloat(sliderColor.value)
         colorLaber.text = String(format: "%.2f", movingResult)
         colorView.backgroundColor = .init(red: CGFloat(colorRedSlider.value),
                                           green: CGFloat(colorGreenSlider.value),
