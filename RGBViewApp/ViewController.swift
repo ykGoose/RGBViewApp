@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var colorGreenSlider: UISlider!
     @IBOutlet var colorBlueSlider: UISlider!
     
-    
     //MARK: - LifeCycleMethod
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,27 +20,19 @@ class ViewController: UIViewController {
         colorGreenValue.text = String(format: "%.2f", colorGreenSlider.value)
         colorBlueValue.text = String(format: "%.2f", colorBlueSlider.value)
         colorView.layer.cornerRadius = 10
-        
         colorView.backgroundColor = .init(red: CGFloat(colorRedSlider.value),
                                           green: CGFloat(colorGreenSlider.value),
                                           blue: CGFloat(colorBlueSlider.value),
                                           alpha: 1)
     }
     
-    
     //MARK: - IBActions
-    @IBAction func movingRedSlider() {
+    @IBAction func slideDone() {
         movingSlider(sliderColor: colorRedSlider, colorLaber: colorRedValue)
-    }
-    
-    @IBAction func movingGreenSlider() {
         movingSlider(sliderColor: colorGreenSlider, colorLaber: colorGreenValue)
-    }
-    
-    @IBAction func movingBlueSlider() {
         movingSlider(sliderColor: colorBlueSlider, colorLaber: colorBlueValue)
     }
-
+    
     //MARK: - Private Method
     private func movingSlider(sliderColor: UISlider, colorLaber: UILabel) {
         let movingResult = CGFloat(sliderColor.value)
@@ -51,4 +42,5 @@ class ViewController: UIViewController {
                                           blue: CGFloat(colorBlueSlider.value),
                                           alpha: 1)
     }
+    
 }
