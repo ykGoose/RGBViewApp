@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  RGBViewApp
-//
-//  Created by Владимир Падусов on 18.10.2020.
-//
 
 import UIKit
 
@@ -25,6 +19,7 @@ class ViewController: UIViewController {
         colorRedValue.text = String(format: "%.2f", colorRedSlider.value)
         colorGreenValue.text = String(format: "%.2f", colorGreenSlider.value)
         colorBlueValue.text = String(format: "%.2f", colorBlueSlider.value)
+        colorView.layer.cornerRadius = 10
         colorView.backgroundColor = .init(red: CGFloat(colorRedSlider.value),
                                           green: CGFloat(colorGreenSlider.value),
                                           blue: CGFloat(colorBlueSlider.value),
@@ -53,8 +48,5 @@ class ViewController: UIViewController {
     @IBAction func movingBlueSlider() {
         movingSlider(sliderColor: colorBlueSlider, colorLaber: colorBlueValue)
     }
-    
-    
 
 }
-
